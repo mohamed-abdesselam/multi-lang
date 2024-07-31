@@ -1,0 +1,21 @@
+{
+  "IndexPage": {
+    "title": "exemple next-intl",
+    "description": "Bienvenue dans l'exemple d'internationalisation (i18n) de Next.js ! Cette démonstration montre la puissance du routeur d'application et comment gérer facilement le contenu multilingue en utilisant next-intl."
+  },
+  "About": {
+    "title": "about",
+    "description": "Bienvenue dans l'exemple d'internationalisation (i18n) de Next.js ! Cette démonstration montre la puissance du routeur d'application et comment gérer facilement le contenu multilingue en utilisant next-intl."
+  },
+  "NotFoundPage": {
+    "title": "Page non trouvée",
+    "description": "Oups ! Il semble que vous êtes tombé sur une page qui n'existe pas. Ne vous inquiétez pas, notre magie de l'internationalisation fonctionne toujours dur sur d'autres parties de l'application. N'hésitez pas à revenir pour explorer davantage !"
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "about": "About"
+  },
+  "Footer": {
+    "copyright": "© 2024 Votre application. Tous droits réservés."
+  }
+}
