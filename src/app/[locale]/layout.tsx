@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
+import ThemeDataProvider from "@/context/theme-data-provider";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,18 +19,29 @@ interface RootLayoutProps {
     locale: string;
   };
 }
+
 export default function RootLayout({
   children,
   params: { locale },
 }: Readonly<RootLayoutProps>) {
   return (
-    <html lang={locale}>
-      <body className={locale === "ar" ? `__rtl_lang text-right ${inter.className}` : inter.className}>
-        <div className='flex flex-col min-h-screen max-w-4xl mx-auto'>
-          <Header />
-          <div className='flex-grow mt-20'>{children}</div>
-          <Footer />
-        </div>
+    <html lang={locale} suppressHydrationWarning>
+      <body className={locale === 'ar' ? `__rtl_lang text-right ${inter.className}` : inter.className}>
+        <NextThemesProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ThemeDataProvider>
+            <div className='flex flex-col min-h-screen'>
+              <Header />
+              <div className='flex-grow'>{children}</div>
+              <Footer />
+            </div>
+          </ThemeDataProvider>
+        </NextThemesProvider>
+
       </body>
     </html>
   );

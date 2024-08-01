@@ -1,24 +1,28 @@
 'use client'
 
-import { useState } from "react"
-import useTranslation from "@/hooks/useTranslation"
+import { useState } from "react";
+import useTranslation from "@/hooks/useTranslation";
+import Container from "@/components/container";
 
-const About = () => { // Renamed from 'About' to 'About'
-  const [count, setCount] = useState(0)
+const About = () => {
+  const [count, setCount] = useState(0);
   const { t } = useTranslation('About');
 
-  const handleIncrease = () => { // Corrected spelling from 'handleIncrese' to 'handleIncrease'
-    setCount(prev => prev + 1)
-  }
+  const handleIncrease = () => {
+    setCount(prev => prev + 1);
+  };
 
   return (
-    <div>
-      <h1>{t('title')}</h1>
-      <p>{t('description')}</p>
-      <p>You clicked {count} times</p>
-      <button className="border px-2 py-1 rounded-md shadow mt-2" onClick={handleIncrease}>plus +</button>
-    </div>
-  )
-}
+    <div className="mt-20">
+      <Container>
+        {/* <h1>{t('title')}</h1> */}
+        <p className="text-primary text-xl">{t('description')}</p>
+        <p>{t('message', { count })}</p>
+        <button className="border px-3 py-1 rounded-md shadow mt-2" onClick={handleIncrease}>+</button>
+      </Container>
 
-export default About
+    </div>
+  );
+};
+
+export default About;

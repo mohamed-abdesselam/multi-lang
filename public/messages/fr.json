@@ -1,21 +1,27 @@
 {
   "IndexPage": {
     "title": "exemple next-intl",
-    "description": "Bienvenue dans l'exemple d'internationalisation (i18n) de Next.js ! Cette démonstration montre la puissance du routeur d'application et comment gérer facilement le contenu multilingue en utilisant next-intl."
+    "description": "Bienvenue dans l'exemple d'internationalisation (i18n) de Next.js ! Cette démonstration montre la puissance du routeur d'application et comment gérer du contenu multilingue de manière transparente en utilisant next-intl."
   },
   "About": {
-    "title": "about",
-    "description": "Bienvenue dans l'exemple d'internationalisation (i18n) de Next.js ! Cette démonstration montre la puissance du routeur d'application et comment gérer facilement le contenu multilingue en utilisant next-intl."
+    "title": "À propos",
+    "description": "Bienvenue sur la page À propos",
+    "message": "Vous avez {count, plural, =0 {aucun abonné} =1 {un abonné} other {# abonnés}}."
   },
   "NotFoundPage": {
     "title": "Page non trouvée",
-    "description": "Oups ! Il semble que vous êtes tombé sur une page qui n'existe pas. Ne vous inquiétez pas, notre magie de l'internationalisation fonctionne toujours dur sur d'autres parties de l'application. N'hésitez pas à revenir pour explorer davantage !"
+    "description": "Oups! Il semble que vous êtes tombé sur une page qui n'existe pas. Ne vous inquiétez pas, notre magie d'internationalisation est toujours en train de travailler dur sur d'autres parties de l'application. N'hésitez pas à revenir pour explorer davantage!"
   },
   "Navigation": {
     "home": "Accueil",
-    "about": "About"
+    "about": "À propos",
+    "color": "Couleur"
   },
   "Footer": {
-    "copyright": "© 2024 Votre application. Tous droits réservés."
+    "copyright": "© 2024 Votre Application. Tous droits réservés."
+  },
+  "Colors": {
+    "title": "Palette de couleurs",
+    "description": "Cette page affiche la palette de couleurs utilisée dans l'application. Chaque couleur a un objectif spécifique dans le système de conception. Vous trouverez ci-dessous une brève explication de l'utilisation typique de chaque couleur, ainsi qu'un exemple de son application:"
   }
 }
